@@ -1,45 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicio 02</title>
+    <title>Document</title>
 </head>
 <body>
     
 <form action="" method="post">
-<label for="Num">digite Aqui um numero:</label>
+<label for="Num">Digite um numero aqui:</label>
 <input type="number" name="Num" required>
 
-
-<button type="submit">Verificar</button>
-
+<button class="Submit"> Verificar</button>
 
 </form>
 
+
 <?php
 
-if($_SERVER["REQUEST_METHOD"]=="POST"){
+if ($_SERVER["REQUEST_METHOD"]=="POST"){
 
 $Num = $_POST["Num"];
 
+if ($Num % 10 == 0){
 
+echo"O ultimo digito é zero";
 
-if($Num / 2 == 0){
-
-echo" O numero é par";
-
-    
 }
 else{
-    echo" O numero é impar";
-}
 
+    echo " o ultimo digito não é zero";
+}
 }
 
 ?>
 
-</div>
 
 </body>
 </html>
